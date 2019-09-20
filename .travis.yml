@@ -31,5 +31,6 @@ deploy:
   github_token: $GITHUB_TOKEN
   keep_history: true
   local_dir: build
+  repo: MaxFlower/maxflower.github.io
   on:
     branch: master
