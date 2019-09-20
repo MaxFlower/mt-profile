@@ -1,5 +1,6 @@
 # Maksim Tsvetkov profile
 
+[![Build Status](https://travis-ci.org/MaxFlower/mt-profile.svg?branch=master)](https://travis-ci.org/MaxFlower/mt-profile)
 
 ## Technical set:
 - PREACT
