@@ -32,5 +32,6 @@ deploy:
   keep_history: true
   local_dir: build
   repo: MaxFlower/maxflower.github.io
+  target_branch: master
   on:
     branch: master
