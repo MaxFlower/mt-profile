@@ -1,4 +1,13 @@
 {
+  "homepage": "maxflower.github.io",
+  "author": "Maksim Tsvetkov",
+  "repository": {
+    "type": "git",
+    "url": "https://https://github.com/MaxFlower/mt-profile"
+  },
+  "bugs": {
+    "url": "https://github.com/MaxFlower/mt-profile/issues"
+  },
   "private": true,
   "name": "mt-profile",
   "version": "0.0.0",
@@ -12,6 +21,23 @@
     "dev": "preact watch",
     "lint": "eslint src",
     "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "header-max-length": [
+        2,
+        "always",
+        128
+      ]
+    }
   },
   "eslintConfig": {
     "extends": "eslint-config-synacor",
@@ -28,6 +54,7 @@
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.0.0",
     "husky": "^2.4.0",
+    "@semantic-release/git": "^7.0.16",
     "eslint": "^4.9.0",
     "eslint-config-synacor": "^2.0.2",
     "per-env": "^1.0.2",
@@ -45,21 +72,22 @@
   "jest": {
     "preset": "jest-preset-preact"
   },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "header-max-length": [
-        2,
-        "always",
-        128
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "package-lock.json"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]"
+        }
       ]
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    ]
   }
 }
