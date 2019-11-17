@@ -43,7 +43,7 @@
     "extends": "eslint-config-synacor",
     "settings": {
       "react": {
-        "version": "detect"
+        "version": "999.999.999"
       }
     }
   },
