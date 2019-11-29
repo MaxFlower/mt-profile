@@ -8,86 +8,39 @@
   "bugs": {
     "url": "https://github.com/MaxFlower/mt-profile/issues"
   },
-  "private": true,
   "name": "mt-profile",
-  "version": "0.0.0",
-  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/jest": "24.0.23",
+    "@types/node": "12.12.12",
+    "@types/react": "16.9.13",
+    "@types/react-dom": "16.9.4",
+    "node-sass": "^4.13.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.2.0",
+    "typescript": "3.7.2"
+  },
   "scripts": {
-    "start": "per-env",
-    "start:production": "npm run -s serve",
-    "start:development": "npm run -s dev",
-    "build": "preact build",
-    "serve": "preact build && preact serve",
-    "dev": "preact watch",
-    "lint": "eslint src",
-    "test": "jest"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "header-max-length": [
-        2,
-        "always",
-        128
-      ]
-    }
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "eslint-config-synacor",
-    "settings": {
-      "react": {
-        "version": "999.999.999"
-      }
-    }
+    "extends": "react-app"
   },
-  "eslintIgnore": [
-    "build/*"
-  ],
-  "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.0.0",
-    "husky": "^2.4.0",
-    "@semantic-release/git": "^7.0.16",
-    "eslint": "^4.9.0",
-    "eslint-config-synacor": "^2.0.2",
-    "per-env": "^1.0.2",
-    "jest": "^21.2.1",
-    "jest-preset-preact": "^1.0.0",
-    "preact-cli": "^2.1.0",
-    "preact-render-spy": "^1.2.1"
-  },
-  "dependencies": {
-    "preact": "^8.5.2",
-    "preact-compat": "^3.17.0",
-    "preact-render-to-string": "^4.1.0",
-    "preact-router": "^2.5.7"
-  },
-  "jest": {
-    "preset": "jest-preset-preact"
-  },
-  "release": {
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/github",
-      "@semantic-release/npm",
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "package.json",
-            "package-lock.json"
-          ],
-          "message": "chore(release): ${nextRelease.version} [skip ci]"
-        }
-      ]
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
   }
 }
