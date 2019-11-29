@@ -1,25 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import styles from  './App.module.scss';
+import styles from './App.module.scss';
+import { Experience, Header, Projects, Skills } from './components';
+import { AppContext, DEFAULT_APP_CONTEXT } from './AppContext';
 
 const App: React.FC = () => {
   return (
-    <div className={styles.App}>
-      <header className={styles["App-header"]}>
-        <img src={logo} className={styles["App-logo"]} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className={styles["App-link"]}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider value={DEFAULT_APP_CONTEXT}>
+      <div className={styles.App}>
+        <Header />
+        <Experience />
+        <Projects />
+        <Skills />
+      </div>
+    </AppContext.Provider>
   );
 };
 
