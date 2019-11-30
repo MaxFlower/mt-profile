@@ -1,0 +1,26 @@
+.vertical-stepper {
+  text-align: center;
+
+  .card {
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: 64px;
+    border: 1px solid #282c34;
+    border-radius: 4px;
+    margin-right: 5%;
+
+    &:not(:last-child):after {
+      content: '>';
+      position: absolute;
+      right: -40px;
+      top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    &:last-child {
+      margin-right: 5%;
+    }
+  }
+}
