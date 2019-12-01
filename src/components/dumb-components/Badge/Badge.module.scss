@@ -1,0 +1,19 @@
+.badge {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+
+  &.positive {
+    color: var(--main-text-color);
+    background: var(--main-bg-color);
+  }
+
+  &.negative {
+    color: var(--main-negative-text-color);
+    background: var(--main-negative-bg-color);
+  }
+}

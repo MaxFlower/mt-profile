@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppContext } from '../../AppContext';
+import { AppContext } from '../../../AppContext';
 
 export const Header: React.FC = () => {
   return (
@@ -7,6 +7,7 @@ export const Header: React.FC = () => {
       {({ personalData }) => (
         <div>
           <h1>{`${personalData.person.firstName} ${personalData.person.lastName}`}</h1>
+          <p>{personalData.person.jobTitle}</p>
         </div>
       )}
     </AppContext.Consumer>

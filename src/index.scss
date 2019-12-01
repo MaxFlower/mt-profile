@@ -1,4 +1,37 @@
-@import "assets/fonts/Roobert/Roobert.css";
+@font-face {
+  font-family: 'Roobert';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/Roobert-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Roobert';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/Roobert-Light.otf');
+}
+
+@font-face {
+  font-family: 'Roobert';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/Roobert-Medium.otf');
+}
+
+@font-face {
+  font-family: 'Roobert';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/Roobert-Regular.otf');
+}
+
+:root {
+  --main-text-color: #282c34;
+  --main-bg-color: #ffffff;
+  --main-negative-text-color: #ffffff;
+  --main-negative-bg-color: #282c34;
+}
 
 body {
   margin: 0;
@@ -7,9 +40,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  color: var(--main-text-color);
+  background: var(--main-bg-color);
 }
