@@ -8,7 +8,7 @@ export const Projects: React.FC = () => {
         <div>
           <h3>Projects</h3>
           <div>
-            {personalData.skills.map((item) => (
+            {personalData.projects.map((item) => (
               <div key={item.name}>{item.name}</div>
             ))}
           </div>
