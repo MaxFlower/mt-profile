@@ -25,4 +25,14 @@
     padding: 16px;
     margin-top: 24px;
   }
+
+  .sectionContainer {
+    display: flex;
+
+    .sectionColumn {
+      display: inline-block;
+      flex: 1;
+      padding-right: 16px;
+    }
+  }
 }

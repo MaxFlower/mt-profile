@@ -1,6 +1,6 @@
 .App {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 0 auto 24px;
 }
 
 .App-header {
@@ -12,8 +12,4 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #09d3ac;
 }

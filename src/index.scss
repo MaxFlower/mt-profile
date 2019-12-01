@@ -29,6 +29,7 @@
 :root {
   --main-border-color: #282c34;
   --main-text-color: #282c34;
+  --accent-text-color: #09d3ac;
   --main-bg-color: #ffffff;
   --main-negative-text-color: #ffffff;
   --main-negative-bg-color: #282c34;
@@ -44,3 +45,20 @@ body {
   color: var(--main-text-color);
   background: var(--main-bg-color);
 }
+
+small {
+  font-size: 18px;
+}
+
+hr {
+  margin-bottom: 32px;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: var(--main-text-color);
+  background: var(--main-bg-color);
+}
+

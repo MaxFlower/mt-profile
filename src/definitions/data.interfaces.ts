@@ -20,9 +20,10 @@ export interface Experience {
 
 export interface Project {
   name: string;
-  projectIcon: string;
+  projectIcon?: string;
   description: string;
   url: string;
+  technologies: Skill[];
 }
 
 export interface Skill {

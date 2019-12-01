@@ -5,10 +5,10 @@ export const Header: React.FC = () => {
   return (
     <AppContext.Consumer>
       {({ personalData }) => (
-        <div>
-          <h1>{`${personalData.person.firstName} ${personalData.person.lastName}`}</h1>
-          <p>{personalData.person.jobTitle}</p>
-        </div>
+        <h1>
+          {`${personalData.person.firstName} ${personalData.person.lastName} `}
+          <small>{personalData.person.jobTitle}</small>
+        </h1>
       )}
     </AppContext.Consumer>
   );

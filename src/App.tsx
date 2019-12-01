@@ -8,8 +8,10 @@ const App: React.FC = () => {
     <AppContext.Provider value={DEFAULT_APP_CONTEXT}>
       <div className={styles.App}>
         <Header />
+        <hr />
         <Experience />
         <Projects />
+        <hr />
         <Skills />
       </div>
     </AppContext.Provider>
