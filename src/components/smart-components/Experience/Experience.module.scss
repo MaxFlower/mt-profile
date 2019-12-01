@@ -7,13 +7,17 @@
     flex: 1;
     display: inline-block;
     height: 124px;
-    border: 1px solid var(--main-border-color);
+    border: 2px solid var(--main-border-color);
     border-radius: 2px;
     margin-right: 16px;
     overflow: hidden;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &.active {
+      border: 2px solid var(--accent-text-color);
     }
   }
 }

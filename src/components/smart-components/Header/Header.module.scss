@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+
+  .langSwitcher {
+    & > * {
+      margin-left: 8px;
+    }
+
+    button.active {
+      font-weight: bold;
+    }
+  }
+}

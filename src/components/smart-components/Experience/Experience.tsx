@@ -3,9 +3,9 @@ import { AppContext } from '../../../AppContext';
 import { Experience as ExperienceItem } from '../../../definitions/data.interfaces';
 import { MediaCard } from '../../dumb-components/MediaCard/MediaCard';
 import { IMG_URL } from '../../../constants';
-import styles from './Experience.module.scss';
 import { ContentRow } from '../../dumb-components/ContentRow/ContentRow';
 import { Badge } from '../../dumb-components/Badge/Badge';
+import styles from './Experience.module.scss';
 
 export const Experience: React.FC = () => {
   const [selectedId, setSelectedId] = useState(0);
@@ -19,10 +19,15 @@ export const Experience: React.FC = () => {
     <AppContext.Consumer>
       {({ personalData }) => (
         <div className={styles.experienceSection}>
-          <h3>Experience</h3>
+          <h3>{personalData.labels.sectionLabels.experience}</h3>
           <div className={styles.verticalStepper}>
             {personalData.experience.map((item: ExperienceItem, index) => (
-              <button className={styles.card} onClick={handleClick} key={item.company} data-index={index}>
+              <button
+                className={`${styles.card} ${selectedId === index ? styles.active : ''}`}
+                onClick={handleClick}
+                key={item.company}
+                data-index={index}
+              >
                 <MediaCard bgUrl={`${IMG_URL}${item.companyIcon}`} />
               </button>
             ))}
@@ -31,23 +36,32 @@ export const Experience: React.FC = () => {
             <h3>{personalData.experience[selectedId].jobTitle}</h3>
             <div className={styles.sectionContainer}>
               <div className={styles.sectionColumn}>
-                <ContentRow rowTitle={'Company'} rowContent={personalData.experience[selectedId].company} />
                 <ContentRow
-                  rowTitle={'Company site'}
+                  rowTitle={personalData.labels.experienceLabels.company}
+                  rowContent={personalData.experience[selectedId].company}
+                />
+                <ContentRow
+                  rowTitle={personalData.labels.experienceLabels.companySite}
                   rowContent={
                     <a href={personalData.experience[selectedId].url}>{personalData.experience[selectedId].url}</a>
                   }
                 />
-                <ContentRow rowTitle={'Location'} rowContent={personalData.experience[selectedId].location} />
-                <ContentRow rowTitle={'Industry'} rowContent={personalData.experience[selectedId].industry} />
+                <ContentRow
+                  rowTitle={personalData.labels.experienceLabels.location}
+                  rowContent={personalData.experience[selectedId].location}
+                />
+                <ContentRow
+                  rowTitle={personalData.labels.experienceLabels.industry}
+                  rowContent={personalData.experience[selectedId].industry}
+                />
               </div>
               <div className={styles.sectionColumn}>
                 <ContentRow
-                  rowTitle={'Description'}
+                  rowTitle={personalData.labels.experienceLabels.description}
                   rowContent={<p>{personalData.experience[selectedId].description}</p>}
                 />
                 <ContentRow
-                  rowTitle={'Company site'}
+                  rowTitle={personalData.labels.experienceLabels.techStack}
                   rowContent={personalData.experience[selectedId].technologies.map((item) => (
                     <Badge key={item.name}>{item.name}</Badge>
                   ))}

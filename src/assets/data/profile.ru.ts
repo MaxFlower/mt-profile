@@ -1,85 +1,56 @@
-import { PersonData, Skill, SkillCategory } from '../../definitions/data.interfaces';
-import { STATIC_DATA } from './static';
+import { PersonData } from '../../definitions/data.interfaces';
+import { SKILLS_SET } from './profile';
+import { STATIC_DATA_RU } from '.';
 
-export const SKILLS_SET: Skill[] = [
-  {
-    name: 'JavaScript',
-    skillCategory: SkillCategory.FRONTEND,
-  },
-  {
-    name: 'TypeScript',
-    skillCategory: SkillCategory.FRONTEND,
-  },
-
-  {
-    name: 'Angular/React/Vue/Ember',
-    skillCategory: SkillCategory.FRONTEND,
-  },
-
-  {
-    name: 'JAVA',
-    skillCategory: SkillCategory.BACKEND,
-  },
-
-  {
-    name: 'PHP',
-    skillCategory: SkillCategory.BACKEND,
-  },
-  {
-    name: 'Yii2/Laravel',
-    skillCategory: SkillCategory.BACKEND,
-  },
-];
-
-export const PERSONAL_DATA: PersonData = {
+export const PERSONAL_DATA_RU: PersonData = {
   person: {
-    firstName: 'Maksim',
-    lastName: 'Tsvetkov',
-    jobTitle: 'Senor Frontend Engineer',
+    firstName: 'Максим',
+    lastName: 'Цветков',
+    jobTitle: 'Ведущий фронтенд разработчик',
   },
   experience: [
     {
-      company: 'Avtotor',
+      company: 'АВТОТОР',
       companyIcon: 'avtotor-logo.png',
       url: 'http://www.avtotor.ru/',
-      industry: 'Automotive industry',
-      jobTitle: 'Lead software engineer / Chief of department',
+      industry: 'Автомобильное производство',
+      jobTitle: 'Ведущий разработчик / Начальник бюро',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      location: 'Russia, Kaliningrad',
+      location: 'Россия, Калининград',
       technologies: [SKILLS_SET[0], SKILLS_SET[3]],
     },
     {
       company: 'GS Group',
       companyIcon: 'gsgroup-logo.png',
       url: 'https://en.gs-group.com/',
-      industry: 'Automotive industry',
-      jobTitle: 'Frontend developer',
+      industry: 'Информационнные технологии',
+      jobTitle: 'Фронтенд разработчик',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      location: 'Russia, Gusev',
+      location: 'Россия, Гусев',
       technologies: [SKILLS_SET[0], SKILLS_SET[1], SKILLS_SET[2]],
     },
     {
       company: 'Kuehne-Nagel',
       companyIcon: 'kuehne-nagel-logo.png',
       url: 'https://ee.kuehne-nagel.com/en_gb/',
-      industry: 'Logistics',
-      jobTitle: 'Fullstack developer / Senior Frontend engineer',
+      industry: 'Логистика',
+      jobTitle: 'Фуллстек разработчик / Ведущий фронтенд разработчик',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      location: 'Estonia, Tallinn',
+      location: 'Эстония, Таллинн',
       technologies: [SKILLS_SET[0], SKILLS_SET[3]],
     },
     {
       company: 'Veriff',
       companyIcon: 'veriff-logo.png',
       url: 'https://www.veriff.com/',
-      industry: 'Automotive industry',
-      jobTitle: 'Senior Frontend engineer',
+      industry: 'Информационнные технологии',
+      jobTitle: 'Ведущий фронтенд разработчик',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      location: 'Estonia, Tallinn',
+      location: 'Эстония, Таллинн',
       technologies: [SKILLS_SET[0], SKILLS_SET[1], SKILLS_SET[2]],
     },
   ],
@@ -107,5 +78,5 @@ export const PERSONAL_DATA: PersonData = {
     },
   ],
   skills: SKILLS_SET,
-  labels: STATIC_DATA,
+  labels: STATIC_DATA_RU,
 };

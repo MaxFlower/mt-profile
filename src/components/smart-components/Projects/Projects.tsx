@@ -6,7 +6,7 @@ export const Projects: React.FC = () => {
     <AppContext.Consumer>
       {({ personalData }) => (
         <div>
-          <h3>Projects</h3>
+          <h3>{personalData.labels.sectionLabels.projects}</h3>
           <div>
             {personalData.projects.map((item) => (
               <div key={item.name}>{item.name}</div>
