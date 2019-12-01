@@ -10,7 +10,7 @@ export enum SkillCategory {
 export interface Experience {
   company: string;
   companyIcon: string;
-  url?: string
+  url?: string;
   industry: string;
   jobTitle: string;
   description: string;
