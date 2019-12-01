@@ -1,0 +1,16 @@
+.mediaCard {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 500;
+
+  &.positive {
+    color: var(--main-text-color);
+    background: var(--main-bg-color);
+  }
+
+  &.negative {
+    color: var(--main-negative-text-color);
+    background: var(--main-negative-bg-color);
+  }
+}

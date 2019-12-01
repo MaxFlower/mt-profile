@@ -1,38 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { AppContext } from '../../../AppContext';
 import { Experience as ExperienceItem } from '../../../definitions/data.interfaces';
 import styles from './Experience.module.scss';
-
-interface IState {
-  selected: ExperienceItem;
-}
+import { MediaCard } from '../../dumb-components/Media-card/MediaCard';
+import { IMG_URL } from '../../../constants';
 
 export const Experience: React.FC = () => {
-  const [selected, setSelected] = useState(null);
-
-  const selectCard = (e: MouseEvent) => {
-    e.preventDefault();
-  };
-
-  useEffect(() => {});
-
   return (
     <AppContext.Consumer>
       {({ personalData }) => (
-        <div>
+        <div className={styles.experienceSection}>
           <h3>Experience</h3>
-          <div>
-            <div className={styles.verticalStepper}>
-              {personalData.experience.map((item, index) => (
-                <button className={styles.card} value={index} key={item.company}>
-                  {item.company}
-                </button>),
-              )}
-            </div>
-            {selected && (<section>
-              <h4>title</h4>
-            </section>)}
+          <div className={styles.verticalStepper}>
+            {personalData.experience.map((item: ExperienceItem) => (
+              <div className={styles.card} key={item.company}>
+                <MediaCard bgUrl={`${IMG_URL}${item.companyIcon}`} />
+              </div>
+            ))}
           </div>
+          <section>
+            <h4>
+              Company: <small>Avtotor</small>
+            </h4>
+          </section>
         </div>
       )}
     </AppContext.Consumer>

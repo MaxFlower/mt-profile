@@ -10,9 +10,7 @@ export const Skills: React.FC = () => {
           <h3>Skills</h3>
           <div>
             {personalData.skills.map((item) => (
-              <Badge key={item.name}>
-                {item.name}
-              </Badge>
+              <Badge key={item.name}>{item.name}</Badge>
             ))}
           </div>
         </div>

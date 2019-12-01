@@ -1,26 +1,28 @@
 .verticalStepper {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   .card {
+    flex: 1;
     display: inline-block;
-    position: relative;
-    width: 20%;
-    height: 64px;
-    border: 1px solid #282c34;
-    border-radius: 4px;
-    margin-right: 5%;
-
-    &:not(:last-child):after {
-      content: '>';
-      position: absolute;
-      right: -40px;
-      top: 20px;
-      font-size: 24px;
-      font-weight: bold;
-    }
+    height: 124px;
+    border: 1px solid var(--main-border-color);
+    border-radius: 2px;
+    margin-right: 16px;
+    overflow: hidden;
 
     &:last-child {
-      margin-right: 5%;
+      margin-right: 0;
     }
+  }
+}
+
+.experienceSection {
+  section {
+    border: 1px solid var(--main-border-color);
+    border-radius: 4px;
+    padding: 16px;
+    margin-top: 24px;
   }
 }
