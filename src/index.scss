@@ -26,6 +26,13 @@
   src: url('/fonts/Roobert-Regular.otf');
 }
 
+:root {
+  --main-text-color: #282c34;
+  --main-bg-color: #ffffff;
+  --main-negative-text-color: #ffffff;
+  --main-negative-bg-color: #282c34;
+}
+
 body {
   margin: 0;
   font-family: 'Roobert', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -33,4 +40,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--main-text-color);
+  background: var(--main-bg-color);
 }

@@ -22,9 +22,9 @@ export const Experience: React.FC = () => {
         <div>
           <h3>Experience</h3>
           <div>
-            <div className={styles['vertical-stepper']}>
+            <div className={styles.verticalStepper}>
               {personalData.experience.map((item, index) => (
-                <button className={styles['card']} value={index} key={item.company}>
+                <button className={styles.card} value={index} key={item.company}>
                   {item.company}
                 </button>),
               )}

@@ -40,6 +40,7 @@ export const PERSONAL_DATA: PersonData = {
     {
       company: 'Avtotor',
       companyIcon: '',
+      url: 'http://www.avtotor.ru/',
       industry: 'Automotive industry',
       jobTitle: 'Lead software engineer / Chief of department',
       description: '',
@@ -49,6 +50,7 @@ export const PERSONAL_DATA: PersonData = {
     {
       company: 'GS Group',
       companyIcon: '',
+      url: 'https://en.gs-group.com/',
       industry: 'Automotive industry',
       jobTitle: 'Frontend developer',
       description: '',
@@ -58,6 +60,7 @@ export const PERSONAL_DATA: PersonData = {
     {
       company: 'Kuehne-Nagel',
       companyIcon: '',
+      url: 'https://ee.kuehne-nagel.com/en_gb/',
       industry: 'Automotive industry',
       jobTitle: 'Fullstack developer / Senior Frontend engineer',
       description: '',
@@ -67,6 +70,7 @@ export const PERSONAL_DATA: PersonData = {
     {
       company: 'Veriff',
       companyIcon: '',
+      url: 'https://www.veriff.com/',
       industry: 'Automotive industry',
       jobTitle: 'Senior Frontend engineer',
       description: '',

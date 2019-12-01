@@ -1,3 +1,5 @@
+export type ElementType = 'positive' | 'negative';
+
 export enum SkillCategory {
   FRONTEND = 'frontend',
   BACKEND = 'backend',
@@ -8,6 +10,7 @@ export enum SkillCategory {
 export interface Experience {
   company: string;
   companyIcon: string;
+  url?: string
   industry: string;
   jobTitle: string;
   description: string;
