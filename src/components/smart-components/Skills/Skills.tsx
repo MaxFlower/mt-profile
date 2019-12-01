@@ -7,7 +7,7 @@ export const Skills: React.FC = () => {
     <AppContext.Consumer>
       {({ personalData }) => (
         <div>
-          <h3>Skills</h3>
+          <h3>{personalData.labels.sectionLabels.skills}</h3>
           <div>
             {personalData.skills.map((item) => (
               <Badge key={item.name}>{item.name}</Badge>

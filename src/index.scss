@@ -27,9 +27,10 @@
 }
 
 :root {
-  --main-border-color: #282c34;
+  --main-border-color: #CED0CE;
   --main-text-color: #282c34;
-  --accent-text-color: #09d3ac;
+  --accent-text-color: #33A1FD;
+  --accent-hover-text-color: #2176FF;
   --main-bg-color: #ffffff;
   --main-negative-text-color: #ffffff;
   --main-negative-bg-color: #282c34;
@@ -44,6 +45,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--main-text-color);
   background: var(--main-bg-color);
+}
+
+a {
+  color: var(--accent-text-color);
+  font-weight: bold;
+
+  &:hover, &:active {
+    color: var(--accent-hover-text-color);
+  }
 }
 
 small {

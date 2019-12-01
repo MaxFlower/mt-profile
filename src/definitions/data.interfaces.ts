@@ -1,3 +1,8 @@
+export enum LANGUAGE {
+  RU = 'ru',
+  EN = 'en',
+}
+
 export type ElementType = 'positive' | 'negative';
 
 export enum SkillCategory {
@@ -31,6 +36,23 @@ export interface Skill {
   skillCategory: SkillCategory;
 }
 
+export interface Label {
+  sectionLabels: {
+    contacts: string;
+    experience: string;
+    projects: string;
+    skills: string;
+  };
+  experienceLabels: {
+    company: string;
+    companySite: string;
+    location: string;
+    industry: string;
+    description: string;
+    techStack: string;
+  };
+}
+
 export interface PersonData {
   person: {
     firstName: string;
@@ -40,4 +62,5 @@ export interface PersonData {
   experience: Experience[];
   projects: Project[];
   skills: Skill[];
+  labels: Label;
 }
