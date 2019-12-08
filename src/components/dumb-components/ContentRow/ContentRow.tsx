@@ -6,10 +6,10 @@ export interface ContentRowProps extends React.HTMLAttributes<HTMLElement> {
   rowContent: string | React.ReactNode;
 }
 
-export const ContentRow: React.FC<ContentRowProps> = ({ rowTitle, rowContent, className }: ContentRowProps) => {
+export const ContentRow: React.FC<ContentRowProps> = ({ rowTitle, rowContent, className = '' }: ContentRowProps) => {
   return (
     <div className={`${styles.contentRow} ${className}`}>
-      <div>{rowTitle}</div>
+      <div>{rowTitle}:</div>
       <div>{rowContent}</div>
     </div>
   );

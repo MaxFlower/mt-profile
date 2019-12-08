@@ -37,6 +37,12 @@ export interface Skill {
 }
 
 export interface Label {
+  contactsLabels: {
+    email: string;
+    phone: string;
+    github: string;
+    linkedin: string;
+  },
   sectionLabels: {
     contacts: string;
     experience: string;
@@ -58,6 +64,10 @@ export interface PersonData {
     firstName: string;
     lastName: string;
     jobTitle: string;
+    email: string;
+    phone: string;
+    github: string;
+    linkedin: string;
   };
   experience: Experience[];
   projects: Project[];

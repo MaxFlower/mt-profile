@@ -17,11 +17,12 @@ export const Header: React.FC<HeaderProps> = ({ changeLang }: HeaderProps) => {
     <AppContext.Consumer>
       {({ personalData, lang }) => (
         <div className={styles.header}>
-          <div>
+          <div className={styles.headerTitle}>
             <h1>
               {`${personalData.person.firstName} ${personalData.person.lastName} `}
-              <small>{personalData.person.jobTitle}</small>
+
             </h1>
+            <small>{personalData.person.jobTitle}</small>
           </div>
           <div className={styles.langSwitcher}>
             <img src={`${IMG_URL}${lang}.png`} alt={lang} title={lang} />

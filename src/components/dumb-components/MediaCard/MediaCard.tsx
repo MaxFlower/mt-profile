@@ -11,6 +11,7 @@ export const MediaCard: React.FC<MediaCardProps> = ({ type = 'positive', classNa
   const inlineStyle = {
     backgroundImage: `url('${bgUrl}')`,
     backgroundPosition: 'center',
+    backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
   };
   return <div className={`${styles.mediaCard} ${styles[type]} ${className}`} style={inlineStyle} />;

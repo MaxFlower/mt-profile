@@ -35,38 +35,34 @@ export const Experience: React.FC = () => {
           <section>
             <h3>{personalData.experience[selectedId].jobTitle}</h3>
             <div className={styles.sectionContainer}>
-              <div className={styles.sectionColumn}>
-                <ContentRow
-                  rowTitle={personalData.labels.experienceLabels.company}
-                  rowContent={personalData.experience[selectedId].company}
-                />
-                <ContentRow
-                  rowTitle={personalData.labels.experienceLabels.companySite}
-                  rowContent={
-                    <a href={personalData.experience[selectedId].url}>{personalData.experience[selectedId].url}</a>
-                  }
-                />
-                <ContentRow
-                  rowTitle={personalData.labels.experienceLabels.location}
-                  rowContent={personalData.experience[selectedId].location}
-                />
-                <ContentRow
-                  rowTitle={personalData.labels.experienceLabels.industry}
-                  rowContent={personalData.experience[selectedId].industry}
-                />
-              </div>
-              <div className={styles.sectionColumn}>
-                <ContentRow
-                  rowTitle={personalData.labels.experienceLabels.description}
-                  rowContent={<p>{personalData.experience[selectedId].description}</p>}
-                />
-                <ContentRow
-                  rowTitle={personalData.labels.experienceLabels.techStack}
-                  rowContent={personalData.experience[selectedId].technologies.map((item) => (
-                    <Badge key={item.name}>{item.name}</Badge>
-                  ))}
-                />
-              </div>
+              <ContentRow
+                rowTitle={personalData.labels.experienceLabels.company}
+                rowContent={personalData.experience[selectedId].company}
+              />
+              <ContentRow
+                rowTitle={personalData.labels.experienceLabels.companySite}
+                rowContent={
+                  <a href={personalData.experience[selectedId].url}>{personalData.experience[selectedId].url}</a>
+                }
+              />
+              <ContentRow
+                rowTitle={personalData.labels.experienceLabels.location}
+                rowContent={personalData.experience[selectedId].location}
+              />
+              <ContentRow
+                rowTitle={personalData.labels.experienceLabels.industry}
+                rowContent={personalData.experience[selectedId].industry}
+              />
+              <ContentRow
+                rowTitle={personalData.labels.experienceLabels.description}
+                rowContent={<p>{personalData.experience[selectedId].description}</p>}
+              />
+              <ContentRow
+                rowTitle={personalData.labels.experienceLabels.techStack}
+                rowContent={personalData.experience[selectedId].technologies.map((item) => (
+                  <Badge key={item.name}>{item.name}</Badge>
+                ))}
+              />
             </div>
           </section>
         </div>

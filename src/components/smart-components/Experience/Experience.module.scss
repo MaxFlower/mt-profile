@@ -1,15 +1,16 @@
 .verticalStepper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
   .card {
-    flex: 1;
     display: inline-block;
-    height: 124px;
+    width: 72px;
+    height: 72px;
+    padding: 8px;
     border: 2px solid var(--main-border-color);
-    border-radius: 2px;
     margin-right: 16px;
+    border-radius: 50%;
     overflow: hidden;
 
     &:last-child {
@@ -24,19 +25,6 @@
 
 .experienceSection {
   section {
-    border: 1px solid var(--main-border-color);
-    border-radius: 4px;
-    padding: 16px;
     margin-top: 24px;
-  }
-
-  .sectionContainer {
-    display: flex;
-
-    .sectionColumn {
-      display: inline-block;
-      flex: 1;
-      padding-right: 16px;
-    }
   }
 }
