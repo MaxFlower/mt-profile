@@ -1,12 +1,16 @@
 import { PersonData } from '../../definitions/data.interfaces';
 import { SKILLS_SET } from './profile';
-import { STATIC_DATA_RU } from '.';
+import { STATIC_DATA_RU } from './static.ru';
 
 export const PERSONAL_DATA_RU: PersonData = {
   person: {
     firstName: 'Максим',
     lastName: 'Цветков',
     jobTitle: 'Ведущий фронтенд разработчик',
+    email: 'maxtsvetapple@gmail.com',
+    phone: '+372 5352 9311',
+    github: 'https://github.com/MaxFlower',
+    linkedin: 'https://www.linkedin.com/in/maksim-tsvetkov/',
   },
   experience: [
     {

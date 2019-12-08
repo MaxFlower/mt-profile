@@ -36,6 +36,10 @@ export const PERSONAL_DATA: PersonData = {
     firstName: 'Maksim',
     lastName: 'Tsvetkov',
     jobTitle: 'Senor Frontend Engineer',
+    email: 'maxtsvetapple@gmail.com',
+    phone: '+372 5352 9311',
+    github: 'https://github.com/MaxFlower',
+    linkedin: 'https://www.linkedin.com/in/maksim-tsvetkov/',
   },
   experience: [
     {
@@ -53,7 +57,7 @@ export const PERSONAL_DATA: PersonData = {
       company: 'GS Group',
       companyIcon: 'gsgroup-logo.png',
       url: 'https://en.gs-group.com/',
-      industry: 'Automotive industry',
+      industry: 'Information technologies',
       jobTitle: 'Frontend developer',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -75,7 +79,7 @@ export const PERSONAL_DATA: PersonData = {
       company: 'Veriff',
       companyIcon: 'veriff-logo.png',
       url: 'https://www.veriff.com/',
-      industry: 'Automotive industry',
+      industry: 'Information technologies',
       jobTitle: 'Senior Frontend engineer',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',

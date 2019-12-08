@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import styles from './App.module.scss';
-import { Experience, Header, Projects, Skills } from './components';
+import { Contacts, Experience, Header, Projects, Skills } from './components';
 import { AppContext, DEFAULT_APP_CONTEXT } from './AppContext';
 import { LANGUAGE } from './definitions/data.interfaces';
-import { PERSONAL_DATA_RU } from './assets/data/profile.ru';
-import { PERSONAL_DATA } from './assets/data/profile';
+import { PERSONAL_DATA, PERSONAL_DATA_RU } from './assets/data';
 
 const App: React.FC = () => {
   const [lang, setLang] = useState(DEFAULT_APP_CONTEXT.lang);
@@ -18,8 +17,10 @@ const App: React.FC = () => {
     >
       <div className={styles.App}>
         <Header changeLang={(lang) => setLang(lang)} />
+        <Contacts />
         <hr />
         <Experience />
+        <hr />
         <Projects />
         <hr />
         <Skills />

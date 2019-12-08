@@ -1,6 +1,10 @@
 .contentRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: inline-block;
   margin-bottom: 16px;
+
+  & > div:first-child {
+    font-weight: 500;
+    min-width: 512px;
+    margin-bottom: 8px;
+  }
 }
