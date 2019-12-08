@@ -39,7 +39,7 @@ export const PERSONAL_DATA: PersonData = {
     email: 'maxtsvetapple@gmail.com',
     phone: '+372 5352 9311',
     github: 'https://github.com/MaxFlower',
-    linkedin: 'https://www.linkedin.com/in/maksim-tsvetkov/'
+    linkedin: 'https://www.linkedin.com/in/maksim-tsvetkov/',
   },
   experience: [
     {

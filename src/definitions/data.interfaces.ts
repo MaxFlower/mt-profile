@@ -42,7 +42,7 @@ export interface Label {
     phone: string;
     github: string;
     linkedin: string;
-  },
+  };
   sectionLabels: {
     contacts: string;
     experience: string;

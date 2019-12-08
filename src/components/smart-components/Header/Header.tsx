@@ -18,10 +18,7 @@ export const Header: React.FC<HeaderProps> = ({ changeLang }: HeaderProps) => {
       {({ personalData, lang }) => (
         <div className={styles.header}>
           <div className={styles.headerTitle}>
-            <h1>
-              {`${personalData.person.firstName} ${personalData.person.lastName} `}
-
-            </h1>
+            <h1>{`${personalData.person.firstName} ${personalData.person.lastName} `}</h1>
             <small>{personalData.person.jobTitle}</small>
           </div>
           <div className={styles.langSwitcher}>
