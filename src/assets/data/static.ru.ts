@@ -1,6 +1,12 @@
 import { Label } from '../../definitions/data.interfaces';
 
 export const STATIC_DATA_RU: Label = {
+  contactsLabels: {
+    email: 'Почта',
+    phone: 'Телефон',
+    github: 'Github',
+    linkedin: 'LinkedIn',
+  },
   sectionLabels: {
     contacts: 'Контакты',
     experience: 'Опыт',
