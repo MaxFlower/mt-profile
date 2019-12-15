@@ -1,10 +1,10 @@
 .contentRow {
   display: inline-block;
   margin-bottom: 16px;
+  width: 100%;
 
   & > div:first-child {
     font-weight: 500;
-    min-width: 512px;
     margin-bottom: 8px;
   }
 }

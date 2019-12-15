@@ -34,7 +34,7 @@ export const Experience: React.FC = () => {
           </div>
           <section>
             <h3>{personalData.experience[selectedId].jobTitle}</h3>
-            <div className={styles.sectionContainer}>
+            <div>
               <ContentRow
                 rowTitle={personalData.labels.experienceLabels.company}
                 rowContent={personalData.experience[selectedId].company}

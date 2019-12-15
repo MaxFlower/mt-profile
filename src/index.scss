@@ -34,11 +34,13 @@
   --main-bg-color: #ffffff;
   --main-negative-text-color: #ffffff;
   --main-negative-bg-color: #282c34;
+  --section-horizontal-padding: 16px;
 }
 
 html, body {
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 body {
@@ -79,4 +81,3 @@ button {
   color: var(--main-text-color);
   background: var(--main-bg-color);
 }
-
