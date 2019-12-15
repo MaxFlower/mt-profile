@@ -17,18 +17,20 @@ export const Header: React.FC<HeaderProps> = ({ changeLang }: HeaderProps) => {
     <AppContext.Consumer>
       {({ personalData, lang }) => (
         <div className={styles.header}>
-          <div className={styles.headerTitle}>
-            <h1>{`${personalData.person.firstName} ${personalData.person.lastName} `}</h1>
-            <small>{personalData.person.jobTitle}</small>
-          </div>
-          <div className={styles.langSwitcher}>
-            <img src={`${IMG_URL}${lang}.png`} alt={lang} title={lang} />
-            <button className={lang === LANGUAGE.EN ? styles.active : ''} onClick={() => changeLanguage(LANGUAGE.EN)}>
-              EN
-            </button>
-            <button className={lang === LANGUAGE.RU ? styles.active : ''} onClick={() => changeLanguage(LANGUAGE.RU)}>
-              RU
-            </button>
+          <div className={styles.headerWrapper}>
+            <div className={styles.headerTitle}>
+              <h1>{`${personalData.person.firstName} ${personalData.person.lastName} `}</h1>
+              <small>{personalData.person.jobTitle}</small>
+            </div>
+            <div className={styles.langSwitcher}>
+              <img src={`${IMG_URL}${lang}.png`} alt={lang} title={lang} />
+              <button className={lang === LANGUAGE.EN ? styles.active : ''} onClick={() => changeLanguage(LANGUAGE.EN)}>
+                EN
+              </button>
+              <button className={lang === LANGUAGE.RU ? styles.active : ''} onClick={() => changeLanguage(LANGUAGE.RU)}>
+                RU
+              </button>
+            </div>
           </div>
         </div>
       )}
