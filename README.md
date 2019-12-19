@@ -3,7 +3,9 @@
 [![Build Status](https://travis-ci.org/MaxFlower/mt-profile.svg?branch=master)](https://travis-ci.org/MaxFlower/mt-profile)
 
 ## Technical set:
-- PREACT
+- REACT (Create React App)
+- Typescript
+- Prettier, Eslint
 - CI: Travis CI  
 
 ## CLI Commands
