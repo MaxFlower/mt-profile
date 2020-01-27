@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './ContentRow.module.scss';
 
-export interface ContentRowProps extends React.HTMLAttributes<HTMLElement> {
-  rowTitle: string | React.ReactNode;
-  rowContent: string | React.ReactNode;
+export interface ContentRowProps extends Pick<React.HTMLAttributes<HTMLElement>, 'id' | 'className'> {
+  rowTitle: React.ReactNode;
+  rowContent: React.ReactNode;
 }
 
 export const ContentRow: React.FC<ContentRowProps> = ({ rowTitle, rowContent, className = '' }: ContentRowProps) => {
