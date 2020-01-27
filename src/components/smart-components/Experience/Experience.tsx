@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { AppContext } from '../../../AppContext';
 import { Experience as ExperienceItem } from '../../../definitions/data.interfaces';
 import { MediaCard } from '../../dumb-components/MediaCard/MediaCard';
-import { IMG_URL } from '../../../constants';
 import { ContentRow } from '../../dumb-components/ContentRow/ContentRow';
 import { Badge } from '../../dumb-components/Badge/Badge';
 import styles from './Experience.module.scss';
@@ -28,7 +27,7 @@ export const Experience: React.FC = () => {
                 key={item.company}
                 data-index={index}
               >
-                <MediaCard bgUrl={`${IMG_URL}${item.companyIcon}`} />
+                <MediaCard bgUrl={`/img/${item.companyIcon}`} />
               </button>
             ))}
           </div>

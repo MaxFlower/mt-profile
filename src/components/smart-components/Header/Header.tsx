@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { AppContext } from '../../../AppContext';
-import styles from './Header.module.scss';
-import { IMG_URL } from '../../../constants';
 import { LANGUAGE } from '../../../definitions/data.interfaces';
+import styles from './Header.module.scss';
 
 export interface HeaderProps {
   changeLang: (lang: LANGUAGE) => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ changeLang }: HeaderProps) => {
-  const changeLanguage = (lang: LANGUAGE) => {
-    changeLang(lang);
-  };
+  const languages = Object.values<string>(LANGUAGE) || [];
+  const changeLanguage = useCallback(
+    (lang: LANGUAGE) => {
+      changeLang && changeLang(lang);
+    },
+    [changeLang]
+  );
 
   return (
     <AppContext.Consumer>
@@ -23,13 +26,16 @@ export const Header: React.FC<HeaderProps> = ({ changeLang }: HeaderProps) => {
               <small>{personalData.person.jobTitle}</small>
             </div>
             <div className={styles.langSwitcher}>
-              <img src={`${IMG_URL}${lang}.png`} alt={lang} title={lang} />
-              <button className={lang === LANGUAGE.EN ? styles.active : ''} onClick={() => changeLanguage(LANGUAGE.EN)}>
-                EN
-              </button>
-              <button className={lang === LANGUAGE.RU ? styles.active : ''} onClick={() => changeLanguage(LANGUAGE.RU)}>
-                RU
-              </button>
+              <img src={`/img/${lang}.png`} alt={lang} title={lang} />
+              {languages.map((it) => (
+                <button
+                  className={it === lang ? styles.active : ''}
+                  key={it}
+                  onClick={() => changeLanguage(it as LANGUAGE)}
+                >
+                  {it}
+                </button>
+              ))}
             </div>
           </div>
         </div>
