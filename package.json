@@ -33,7 +33,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint './src/**/*.{ts,tsx}'"
+    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release",
+    "cz": "git-cz"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -58,5 +61,14 @@
     "bracketSpacing": true,
     "arrowParens": "always",
     "endOfLine": "lf"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.0.2",
+    "semantic-release": "^17.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
