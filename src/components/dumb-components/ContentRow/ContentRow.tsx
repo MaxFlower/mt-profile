@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styles from './ContentRow.module.scss';
 
 export interface ContentRowProps extends Pick<React.HTMLAttributes<HTMLElement>, 'id' | 'className'> {
@@ -7,10 +7,13 @@ export interface ContentRowProps extends Pick<React.HTMLAttributes<HTMLElement>,
 }
 
 export const ContentRow: React.FC<ContentRowProps> = ({ rowTitle, rowContent, className = '' }: ContentRowProps) => {
-  return (
-    <div className={`${styles.contentRow} ${className}`}>
-      <div>{rowTitle}:</div>
-      <div>{rowContent}</div>
-    </div>
+  return useMemo(
+    () => (
+      <div className={`${styles.contentRow} ${className}`}>
+        <div>{rowTitle}:</div>
+        <div>{rowContent}</div>
+      </div>
+    ),
+    [rowTitle, rowContent, className]
   );
 };
