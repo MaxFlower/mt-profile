@@ -9,6 +9,22 @@ import styles from './Experience.module.scss';
 export const Experience: React.FC = () => {
   const [selectedId, setSelectedId] = useState(0);
 
+  const SwitchButton = React.memo<{
+    index: number;
+    handleClick: (e: React.MouseEvent<HTMLElement>) => void;
+    item: ExperienceItem;
+  }>(function SwitchButton({ index, handleClick, item }) {
+    return (
+      <button
+        className={`${styles.card} ${selectedId === index ? styles.active : ''}`}
+        onClick={handleClick}
+        data-index={index}
+      >
+        <MediaCard bgUrl={`/img/${item.companyIcon}`} />
+      </button>
+    );
+  });
+
   const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     setSelectedId(Number(e.currentTarget.getAttribute('data-index')));
@@ -21,14 +37,7 @@ export const Experience: React.FC = () => {
           <h3>{personalData.labels.sectionLabels.experience}</h3>
           <div className={styles.verticalStepper}>
             {personalData.experience.map((item: ExperienceItem, index) => (
-              <button
-                className={`${styles.card} ${selectedId === index ? styles.active : ''}`}
-                onClick={handleClick}
-                key={item.company}
-                data-index={index}
-              >
-                <MediaCard bgUrl={`/img/${item.companyIcon}`} />
-              </button>
+              <SwitchButton index={index} handleClick={handleClick} item={item} key={item.company} />
             ))}
           </div>
           <section>

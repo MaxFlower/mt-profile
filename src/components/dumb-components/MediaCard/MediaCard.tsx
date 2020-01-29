@@ -8,15 +8,18 @@ export interface MediaCardProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export const MediaCard: React.FC<MediaCardProps> = ({ type = 'positive', className = '', bgUrl }: MediaCardProps) => {
-  const inlineStyle = {
-    backgroundImage: `url('${bgUrl}')`,
-    backgroundPosition: 'center',
-    backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat',
-  };
-  return useMemo(() => <div className={`${styles.mediaCard} ${styles[type]} ${className}`} style={inlineStyle} />, [
-    type,
-    className,
-    bgUrl,
-  ]);
+  return useMemo(
+    () => (
+      <div
+        className={`${styles.mediaCard} ${styles[type]} ${className}`}
+        style={{
+          backgroundImage: `url('${bgUrl}')`,
+          backgroundPosition: 'center',
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+    ),
+    [type, className, bgUrl]
+  );
 };
