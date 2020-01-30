@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { AppContext } from '../../../AppContext';
 import { LANGUAGE } from '../../../definitions/data.interfaces';
 import styles from './Header.module.scss';
@@ -9,12 +9,27 @@ export interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ changeLang }: HeaderProps) => {
   const languages = Object.values<string>(LANGUAGE) || [];
-  const changeLanguage = useCallback(
-    (lang: LANGUAGE) => {
-      changeLang && changeLang(lang);
-    },
-    [changeLang]
-  );
+
+  const handleClick = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    changeLang((e.currentTarget.getAttribute('data-lang') || '') as LANGUAGE);
+  };
+
+  const SwitchButton = React.memo<{
+    currLanguage: string;
+    language: string;
+    handleClick: (e: React.MouseEvent<HTMLElement>) => void;
+  }>(function SwitchButton({ currLanguage, language, handleClick }) {
+    return (
+      <button
+        className={language === currLanguage ? styles.active : ''}
+        data-lang={language}
+        onClick={handleClick}
+      >
+        {language}
+      </button>
+    );
+  });
 
   return (
     <AppContext.Consumer>
@@ -27,14 +42,8 @@ export const Header: React.FC<HeaderProps> = ({ changeLang }: HeaderProps) => {
             </div>
             <div className={styles.langSwitcher}>
               <img src={`/img/${lang}.png`} alt={lang} title={lang} />
-              {languages.map((it) => (
-                <button
-                  className={it === lang ? styles.active : ''}
-                  key={it}
-                  onClick={() => changeLanguage(it as LANGUAGE)}
-                >
-                  {it}
-                </button>
+              {languages.map((language, index) => (
+                <SwitchButton currLanguage={lang} language={language} handleClick={handleClick} key={index} />
               ))}
             </div>
           </div>
