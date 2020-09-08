@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "JavaScript",
+    "skillCategory": "frontend"
+  },
+  {
+    "id": 2,
+    "name": "TypeScript",
+    "skillCategory": "frontend"
+  },
+  {
+    "id": 3,
+    "name": "Angular/React/Vue/Ember",
+    "skillCategory": "frontend"
+  },
+  {
+    "id": 4,
+    "name": "JAVA",
+    "skillCategory": "backend"
+  },
+  {
+    "id": 5,
+    "name": "PHP",
+    "skillCategory": "backend"
+  },
+  {
+    "id": 6,
+    "name": "Yii2/Laravel",
+    "skillCategory": "backend"
+  }
+]
