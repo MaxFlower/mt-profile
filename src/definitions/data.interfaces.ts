@@ -3,7 +3,7 @@ export enum LANGUAGE {
   EN = 'en',
 }
 
-export type ElementType = 'positive' | 'negative';
+export type ElementColorType = 'positive' | 'negative';
 
 export enum SkillCategory {
   FRONTEND = 'frontend',
@@ -71,6 +71,4 @@ export interface PersonData {
   };
   experience: Experience[];
   projects: Project[];
-  skills: Skill[];
-  labels: Label;
 }

@@ -20,11 +20,11 @@
     "@typescript-eslint/parser": "^1.11.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-config-react": "^1.1.7",
-    "eslint-plugin-prettier": "^3.0.1",
-    "node-sass": "^4.13.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "node-sass": "^4.14.1",
     "prettier": "^1.16.4",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-scripts": "3.2.0",
     "typescript": "3.7.2"
   },
@@ -64,8 +64,9 @@
   },
   "devDependencies": {
     "@semantic-release/git": "^9.0.0",
-    "cz-conventional-changelog": "^3.0.2",
-    "semantic-release": "^17.0.0"
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "semantic-release": "^17.1.1"
   },
   "config": {
     "commitizen": {
