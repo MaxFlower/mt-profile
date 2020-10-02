@@ -33,6 +33,7 @@ const App: React.FC = () => {
       setSkills(skills);
     }
     init();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 
   useEffect(() => {

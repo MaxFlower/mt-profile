@@ -1,5 +1,5 @@
 import React from 'react';
-import { Label, LANGUAGE, PersonData, Project, Skill } from '../definitions/data.interfaces';
+import { Label, LANGUAGE, PersonData, Skill } from '../definitions/data.interfaces';
 import { STATIC_DATA, STATIC_DATA_RU } from '../assets/data';
 
 export interface AppContext {
