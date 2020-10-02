@@ -1,18 +1,18 @@
 import { PersonData, Skill } from '../definitions/data.interfaces';
 
-const API_URL = 'https://raw.githubusercontent.com/maxflower/mt-profile/master/json';
-const OPTIONS = {
-  method: 'GET',
-  headers: new Headers({'content-type': 'application/json'}),
-  mode: 'cors' as RequestMode
-};
+const API_URL = 'https://github-raw-proxy.herokuapp.com/maxflower/mt-profile/master/json';
 
 const apiGet = async <T>(url: string): Promise<T> => {
-  const response = await fetch(API_URL + url, OPTIONS);
-
-  console.log(response)
-
-  return response.json();
+  const  xhttp = new XMLHttpRequest();
+  return new Promise<T>((resolve, _) => {
+    xhttp.onreadystatechange = function() {
+      if (this.readyState === 4 && this.status === 200) {
+        return resolve(JSON.parse(xhttp.response));
+      }
+    };
+    xhttp.open("GET", API_URL + url, true);
+    xhttp.send();
+  });
 };
 
 const fetchPersonData = async (url: string) => {

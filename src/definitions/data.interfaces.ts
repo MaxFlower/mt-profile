@@ -20,7 +20,7 @@ export interface Experience {
   jobTitle: string;
   description: string;
   location: string;
-  technologies: Skill[];
+  technologies: number[];
 }
 
 export interface Project {
@@ -28,7 +28,7 @@ export interface Project {
   projectIcon?: string;
   description: string;
   url: string;
-  technologies: Skill[];
+  technologies: number[];
 }
 
 export interface Skill {
