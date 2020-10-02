@@ -1,5 +1,5 @@
 import React from 'react';
-import { Label, LANGUAGE, PersonData, Skill } from '../definitions/data.interfaces';
+import { Label, LANGUAGE, PersonData, Project, Skill } from '../definitions/data.interfaces';
 import { STATIC_DATA, STATIC_DATA_RU } from '../assets/data';
 
 export interface AppContext {
@@ -16,7 +16,7 @@ export const DEFAULT_APP_CONTEXT: AppContext = {
   labels: {
     'ru': STATIC_DATA_RU,
     'en': STATIC_DATA,
-  },
+  }
 };
 
 export const AppContext = React.createContext(DEFAULT_APP_CONTEXT);

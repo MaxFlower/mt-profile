@@ -8,7 +8,7 @@ import styles from './Experience.module.scss';
 
 export const Experience: React.FC = () => {
   const [selectedId, setSelectedId] = useState(0);
-  const { personalData, labels, currentLanguage } = useContext(AppContext);
+  const { personalData, labels, currentLanguage, skills } = useContext(AppContext);
   const currentData = personalData[currentLanguage];
   const currentLabels = labels[currentLanguage];
 
@@ -68,12 +68,12 @@ export const Experience: React.FC = () => {
                 rowTitle={currentLabels.experienceLabels.description}
                 rowContent={<p>{currentData.experience[selectedId].description}</p>}
               />
-              <ContentRow
+              {skills && (<ContentRow
                 rowTitle={currentLabels.experienceLabels.techStack}
-                rowContent={currentData.experience[selectedId].technologies.map((item) => (
-                  <Badge key={item.name}>{item.name}</Badge>
+                rowContent={currentData.experience[selectedId].technologies.map((item, idx) => (
+                  <Badge key={idx}>{skills[item - 1] && skills[item - 1].name}</Badge>
                 ))}
-              />
+              />)}
             </div>
           </section>
         </>

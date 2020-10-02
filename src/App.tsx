@@ -28,12 +28,12 @@ const App: React.FC = () => {
 
   useEffect(() => {
     async function init() {
-      updatePersonData();
+      await updatePersonData();
       const skills = await fetchSkillLabels();
       setSkills(skills);
     }
     init();
-  },[updatePersonData]);
+  },[]);
 
   useEffect(() => {
     if (!personalData[currentLanguage]) {
@@ -52,7 +52,7 @@ const App: React.FC = () => {
         <Header onLanguageChange={handleChange} />
         <Contacts />
         <Experience />
-        {false && <Projects />}
+        <Projects />
         <Skills />
       </div>
     </AppContext.Provider>

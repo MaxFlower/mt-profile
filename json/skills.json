@@ -28,5 +28,10 @@
     "id": 6,
     "name": "Yii2/Laravel",
     "skillCategory": "backend"
+  },
+  {
+    "id": 7,
+    "name": "IEC 61131-3",
+    "skillCategory": "backend"
   }
 ]
